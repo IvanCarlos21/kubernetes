@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-06-17T08:26:28Z"
+  labels:
+    run: mysql
+  name: mysql
+  namespace: default
+  resourceVersion: "44432"
+  uid: 1448e44c-625b-4042-aa7d-a329d20ac710
+spec:
+  clusterIP: 10.104.215.235
+  clusterIPs:
+  - 10.104.215.235
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    run: mysql
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
